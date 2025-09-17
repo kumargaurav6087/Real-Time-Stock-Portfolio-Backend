@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to portfolio tracker");
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 connectDb().then(() => {
   app.listen(PORT, () => {
     console.log(`🚀 Server is running at port : ${PORT}`);
